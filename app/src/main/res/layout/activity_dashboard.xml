@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Mini Weather Station"
+            android:textAlignment="center"
+            android:textColor="#2196F3"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="39dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Start a new Journey"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:srcCompat="@drawable/weather"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sun"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="21dp"
+                        android:text="Temperature"
+                        android:textAlignment="center"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/sun"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/sun" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hum"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="39dp"
+                        android:text="Humidity"
+                        android:textAlignment="center"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/hum"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/humidity" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/du"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dust"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="42dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="46dp"
+                        android:text="Dust"
+                        android:textAlignment="center"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/dust"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/dust" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/pression"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/press"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="39dp"
+                        android:text="Pression"
+                        android:textAlignment="center"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/press"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/pression" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/uv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/uvi"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="41dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="41dp"
+                        android:text="UV Index"
+                        android:textAlignment="center"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/uvi"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/uv" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/uvi"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="11dp"
+                        android:text="Light Intensity"
+                        android:textAlignment="center"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/uvi"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/light" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sum"
+            android:layout_width="120dp"
+            android:layout_height="39dp"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+
+            android:text="Summary"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.841"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
