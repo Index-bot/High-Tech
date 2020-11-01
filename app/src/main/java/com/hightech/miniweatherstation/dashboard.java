@@ -16,7 +16,7 @@ public class dashboard extends AppCompatActivity {
     private Button light;
     private Button press;
     private Button uv;
-
+    private Button acc;
 
 
 
@@ -74,6 +74,13 @@ public class dashboard extends AppCompatActivity {
                 openuv();
             }
         });
+        acc = (Button) findViewById(R.id.accountmanagement);
+        acc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openacc();
+            }
+        });
     }
 
     public void opensummary () {
@@ -102,6 +109,10 @@ public class dashboard extends AppCompatActivity {
     }
     public void openuv () {
         Intent intent = new Intent(this, com.hightech.miniweatherstation.Uv.class);
+        startActivity(intent);
+    }
+    public void openacc () {
+        Intent intent = new Intent(this, com.hightech.miniweatherstation.account.class);
         startActivity(intent);
     }
 }
