@@ -13,7 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".summary"></activity>
+        <activity android:name=".dust"></activity>
+        <activity android:name=".light" />
+        <activity android:name=".pression" />
+        <activity android:name=".Uv" />
+        <activity android:name=".humidity" />
+        <activity android:name=".temp" />
+        <activity android:name=".summary" />
         <activity android:name=".dashboard" />
         <activity android:name=".inscription" />
         <activity android:name=".MainActivity">
